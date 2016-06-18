@@ -1,10 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * A class to hold details of audio files.
- * 
- * @author David J. Barnes and Michael KÃ¶lling
- * @version 2011.07.31
+ * SEPT
  */
 public class MusicOrganizer
 {
@@ -59,4 +56,28 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
+    
+    /**
+     * mt para comprobar que el rango del parámetro se ajusta al atributo "files".
+     */
+    public void checkIndex(int index){
+        if(index < 0 || index >= files.size()){
+            System.out.println("Error el valor pasado no está entre [0 y " + (files.size()-1)+ "]"   );
+        }
+    }
 }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
