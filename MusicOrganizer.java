@@ -7,6 +7,7 @@ public class MusicOrganizer
 {
     // An ArrayList for storing the file names of music files.
     private ArrayList<String> files;
+    //private boolean indexValido;
         
     /**
      * Create a MusicOrganizer
@@ -14,6 +15,7 @@ public class MusicOrganizer
     public MusicOrganizer()
     {
         files = new ArrayList<String>();
+        //indexValido = true;
     }
     
     /**
@@ -65,6 +67,18 @@ public class MusicOrganizer
             System.out.println("Error el valor pasado no está entre [0 y " + (files.size()-1)+ "]"   );
         }
     }
+    
+    /**
+     *que devuelva un valor booleano en función de si su parámetro entero es un índice válido o no para el atributo 
+     *files
+     */
+    public boolean  validIndex(int index){
+        boolean indexValido = true;
+        if(index < 0 || index >= files.size()){
+            indexValido = false;
+        }
+        return indexValido;
+    } 
 }
 
     
